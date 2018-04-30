@@ -11,6 +11,16 @@
 
     gtag('config', 'UA-118063397-1');
   </script>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+    w[l] = w[l] || []; w[l].push({
+      'gtm.start':
+        new Date().getTime(), event: 'gtm.js'
+    }); var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-5C53M7Q');</script>
+  <!-- End Google Tag Manager -->
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,10 +35,15 @@
 </head>
 
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5C53M7Q" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
   <nav class="navbar fixed-top">
     <a class="navbar-brand" href="#">Pupster</a>
     <div class="d-flex signup-login">
-      <button data-toggle="modal" data-target="#signup-modal" class="btn round d-none d-sm-block">Sign Up</button>
+      <button data-location="navbar" data-toggle="modal" data-target="#signup-modal" class="btn round d-none d-sm-block signup">Sign Up</button>
       <button data-toggle="modal" data-target="#login-modal" class="btn round d-none d-sm-block">Log In</button>
     </div>
   </nav>
@@ -123,7 +138,7 @@
       <div class="row">
         <div class="col-md-12 text-center">
           <h1>Sign Up For Exclusive Early Access</h1>
-          <button data-toggle="modal" data-target="#signup-modal" class="btn btn-red mt-4">Sign Up</button>
+          <button data-location="bottom" data-toggle="modal" data-target="#signup-modal" class="btn btn-red signup mt-4">Sign Up</button>
         </div>
       </div>
     </div>
@@ -206,6 +221,17 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
     crossorigin="anonymous"></script>
+
+    <script>
+      $(".signup").on("click", function(event) {
+        ga('send', {
+          hitType: 'event',
+          eventCategory: 'Click',
+          eventAction: 'signup',
+          eventLabel: $(this).attr("data-location")
+        });
+      });
+    </script>
 </body>
 
 </html>
