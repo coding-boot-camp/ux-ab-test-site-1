@@ -1,0 +1,165 @@
+body {
+  font-family: "Cardo", sans-serif;
+  font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+  font-family: "Montserrat";
+}
+
+p,
+li {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+nav {
+  background: transparent;
+  font-family: "Montserrat";
+}
+
+a, a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+nav .btn.round {
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+  padding-left: 22px;
+  padding-right: 22px;
+  padding-top: 11px;
+  padding-bottom: 14px;
+  background: #fff;
+  vertical-align: middle;
+  border-radius: 99px;
+  border: none;
+  outline: none;
+  color: #303030;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.navbar-brand {
+  color: white;
+  text-decoration: none;
+}
+
+.hero {
+  padding-top: 140px;
+  padding-bottom: 120px;
+  height: 75vh;
+  background-image: url("../images/hero.jpg");
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+.jumbotron.hero h1 {
+  font-size: 6rem;
+}
+
+.jumbotron.hero p.lead {
+  font-size: 2rem;
+}
+
+.hero *,
+.walk *,
+.freedom *,
+.playing *,
+.signup * {
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+
+.hero::after,
+.walk::after,
+.freedom::after,
+.playing::after,
+.signup::after {
+  content: "";
+  display: block;
+  opacity: 0.4;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #000;
+}
+
+.section {
+  background-size: cover;
+  background-position: 50%;
+  position: relative;
+}
+
+.walk {
+  background-image: url("../images/walk.jpg");
+}
+
+.freedom {
+  background-image: url("../images/freedom.jpg");
+}
+
+.playing {
+  background-image: url("../images/playing.jpg");
+}
+
+.signup {
+  background-image: url("../images/signup.jpg");
+}
+
+.container-fluid.section {
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.container-fluid.section > .content {
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+footer {
+  background: #1F2838;
+}
+
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+footer li {
+  display: inline-block;
+  padding: 10px;
+}
+
+.appstore-btn {
+  background-image: url("../images/appstore.svg");
+  display: inline-block;
+  overflow: hidden;
+  background-size: auto auto;
+  width: 190px;
+  height: 56px;
+  background-size: contain;
+}
+
+.btn.red {
+  background: #ff595f;
+  color: white;
+  font-weight: 600;
+  padding: 15px;
+}
+
+.fas {
+  font-size: 7rem;
+}
